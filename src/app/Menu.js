@@ -11,7 +11,7 @@ const imageStyle = {
 }
 export default function Menu() {
   const [bg, setBg] = useState('') // 控制背景圖片
-
+  const [isOpen, setIsOpen] = useState(false)
   // 模擬 menu-list 資料
   const menuItems = portfolioItems.reduce((acc, item) => {
     const { category, id, title } = item
@@ -54,12 +54,16 @@ export default function Menu() {
   return (
     <menu>
       <div>
-        <div>
+        <div id="nav">
           <Link href="/" className="link">
             Xiao&apos;s Resume
           </Link>
-          <button className="menu">
-            作品集
+          <div
+            className="menu"
+            onMouseEnter={() => setIsOpen(true)}
+            onMouseLeave={() => setIsOpen(false)}
+          >
+            <div>作品集</div>
             <ul role="menu" className="dropdown-menu">
               {Object.keys(menuItems).map((category) => (
                 <React.Fragment key={category}>
@@ -76,10 +80,15 @@ export default function Menu() {
                 </React.Fragment>
               ))}
             </ul>
-          </button>
+          </div>
 
-          <button className="menu">
-            關於我
+          <div
+            className="menu"
+            onMouseEnter={() => setIsOpen(true)}
+            onMouseLeave={() => setIsOpen(false)}
+          >
+            <div>關於我</div>
+
             <ul role="menu" className="dropdown-menu">
               <span id="name">蕭淳云 XIAO CHUN-YUN</span>
               <br />
@@ -108,19 +117,6 @@ export default function Menu() {
                 ))}
               </div>
             </ul>
-          </button>
-
-          {/* 背景圖片顯示 */}
-          <div
-            className="dropdown-menu"
-            style={{
-              width: '300px',
-              height: '200px',
-              backgroundImage: `url(${bg})`,
-              backgroundSize: 'cover',
-            }}
-          >
-            Dropdown content
           </div>
         </div>
         <SearchBar />

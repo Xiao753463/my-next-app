@@ -125,20 +125,35 @@ menu {
     display: inline-block; /* 保證元素可以調整寬高 */
     padding: 0 10px; /* 可選的左右內間距 */
     }
+#nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
 .menu {
+    display: flex;
+    align-items: center;
+    padding: auto 0;
     background: none;
     height: 100%;
     cursor: pointer;
-    padding: 10px;
+    margin: 0 10px;
     border: none;
     color: rgb(88, 88, 88);
+    text-align: center;
+}
+.menu div{
+    text-align: center;
+    height: auto;
 }
     .menu:hover{
         background-color:rgb(248, 248, 248);
     }
-        .menu:hover .dropdown-menu {
-            display: block;
-        }
+    .menu:hover .dropdown-menu{
+        display: block;
+    }
 .subtitle{
     color: rgb(50, 50, 50);
     font-weight: 700;
@@ -423,5 +438,8 @@ footer {
     }
     #works{
         width: 70%;
+    }
+    .search-container{
+        display: none;
     }
 }
