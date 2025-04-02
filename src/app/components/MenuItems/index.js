@@ -5,6 +5,9 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
+const openLink = (url) => {
+  window.open(url, '_blank')
+}
 export default function MenuItems({
   menuItems,
   socialMediaLinks,

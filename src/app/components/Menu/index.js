@@ -80,10 +80,6 @@ export default function Menu() {
     setBg('') // 清空背景圖片
   }
 
-  const openLink = (url) => {
-    window.open(url, '_blank')
-  }
-
   return (
     <menu>
       <div>
