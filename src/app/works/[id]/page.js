@@ -15,7 +15,6 @@ const Work = ({ data }) => {
   const item = portfolioItems.find((item) => item.id === parseInt(id))
   return (
     <div>
-      <Blank h={30} />
       <div id="main">
         <div className="big-img">
           <Image

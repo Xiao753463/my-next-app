@@ -1,0 +1,137 @@
+menu {
+  z-index: 4;
+  position: fixed;
+  background-color: rgba(var(--menu-bg),0.9);
+  box-shadow: 0px 0.1px 0.1px 1px rgba(0, 0, 0,0.1);
+  transition-duration: 0.3s;
+  transition-property: background-color;
+  height: 60px;
+  width: 100%;
+  top: 0%;
+  display: flex;
+  justify-content: center;
+}
+  menu:hover {
+      transition-duration: 0.3s;
+      transition-property: background-color;
+      background-color: rgba(var(--menu-bg),1);
+  }
+  menu > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position:relative;
+      height: 100%;
+      width: 70%;
+      max-width: 1200px;
+  }
+  menu .link{
+    width: auto;
+    height: auto;
+    padding: 0;
+    font-size: 16px;
+    text-align: center; /* 讓文字水平置中 */
+    display: inline-block; /* 保證元素可以調整寬高 */
+    padding: 0 10px; /* 可選的左右內間距 */
+  }
+#nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+  background: none;
+  height: 100%;
+  cursor: pointer;
+  margin: 0 10px;
+  border: none;
+  color: var(--color-text);
+  text-align: center;
+  min-width: 60px;
+}
+.menu div{
+  width: 100%;
+  text-align: center;
+  height: auto;
+  cursor: pointer;
+}
+  .menu:hover{
+      background-color:var(--color-hover);
+  }
+  .menu:hover .dropdown-menu{
+      display: block;
+  }
+  .dropdown-menu {
+    border-radius: 5px;
+    top: 60px;
+    cursor: default;
+    display: none;
+    position: absolute;
+    border: 1px solid #ddd;
+    list-style-type: none;
+    box-shadow: 0 2px 6px 0 rgb(0 0 0 / 10%);
+    background-color: var(--color-bg);
+    text-align: left;
+    padding: 10px;
+}
+
+#name {
+  color: var(--color-text);
+  font-size: 12pt;
+  font-weight:bold;
+}
+#socialmedia {
+  display: flex;
+  height: 50px;
+  justify-content: flex-start;
+  left:0;
+}
+.socialimg {
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+  .socialimg img {
+      width: 100%;
+      height: 100%;
+  }
+  .socialimg:hover {
+      transition: transform 0.5s;
+      transition-timing-function: cubic-bezier(0.5,5,0.4,0.75);
+      transform: scale(1.1);
+  }
+  .dropdown-menu li {
+      padding: 0px 10px;
+      margin-top: 5px;
+      font-size: 10pt;
+      border-radius: 3px;
+  }
+  .dropdown-menu .subtitle {
+    padding: 5px 10px;
+    color: gray;
+    font-size: 10pt;
+
+  }
+  .menu-list:hover {
+      background-color: var(--color-hover);;
+      cursor:pointer;
+  }
+  #tools{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #themeBtn{
+    background-color: var(--themebtn-bg);
+    margin: 10px;
+  }
+  @media (max-width:600px) {
+    menu > div {
+      justify-content: center;
+  }
+  }
+
+  

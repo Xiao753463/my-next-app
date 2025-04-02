@@ -49,6 +49,7 @@
     padding: 5px;
 }
 .big-img{
+    margin-top: 30px;
     width: 35%;
     min-width: 400px;
     display: flex;

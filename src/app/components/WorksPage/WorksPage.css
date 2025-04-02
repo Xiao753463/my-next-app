@@ -1,0 +1,17 @@
+button{
+  margin-right: 10px;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  background-color: inherit;
+  color: inherit
+}
+button:hover{
+  background-color: var(--color-hover)
+}
+button.selected {
+  background-color: var(--color-selected-bg);
+  color: var(--color-selected-text)
+}
