@@ -30,9 +30,15 @@ export default function Menu() {
       const prefersDark = window.matchMedia(
         '(prefers-color-scheme: dark)'
       ).matches
-      html.classList.add(prefersDark ? 'dark' : 'light')
+      if (prefersDark) {
+        html.classList.add('dark')
+        setThemeState(theme.dark)
+      } else {
+        html.classList.add('light')
+        setThemeState(theme.light)
+      }
     }
-  }, [])
+  })
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const toggleMobileMenu = () => {
