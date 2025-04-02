@@ -67,14 +67,14 @@ menu {
   }
   .dropdown-menu {
     border-radius: 5px;
-    top: 60px;
+    top: 65px;
     cursor: default;
     display: none;
     position: absolute;
-    border: 1px solid #ddd;
+    border: 1px solid var(--color-bg);
     list-style-type: none;
-    box-shadow: 0 2px 6px 0 rgb(0 0 0 / 10%);
-    background-color: var(--color-bg);
+    box-shadow: 0 2px 6px 0 rgb(var(--dropdown-shadow) / 10%);
+    background-color: rgb(var(--menu-bg));
     text-align: left;
     padding: 10px;
 }
@@ -124,10 +124,7 @@ menu {
     display: flex;
     flex-wrap: wrap;
   }
-  #themeBtn{
-    background-color: var(--themebtn-bg);
-    margin: 10px;
-  }
+  
   @media (max-width:600px) {
     menu > div {
       justify-content: center;

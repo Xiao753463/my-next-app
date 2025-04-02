@@ -1,0 +1,26 @@
+#theme-toggle{
+  top: 10px;
+  right: 15px;
+  display: block;
+  position: absolute;
+  height: 25px;
+  background-color: black;
+  width: 50px;
+  border-radius: 25px;
+  background-color: var(--theme-toggle-bg);
+  box-shadow: inset 5px;
+  overflow: hidden;
+  box-shadow:  inset 0px 0px 10px 0px var(--theme-toggle-shadow);
+  
+}
+#theme-toggle-btn{
+  x: 0;
+  background-color: var(--themebtn-bg);
+  position: relative;
+  height: 25px;
+  width: 25px;
+  border-radius: 25px;
+  border: none;
+  margin: 0;
+  box-shadow: 0px 0px 5px 3px var(--theme-toggle-shadow),inset 0px 0px 2px 0px var(--theme-toggle-shadow);
+}

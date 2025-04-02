@@ -3,26 +3,37 @@ import React, { useState, useContext, useEffect } from 'react'
 import { portfolioItems } from '../../data'
 import SearchBar from '../SearchBar'
 import MenuItems from '../MenuItems'
+import ThemeButton from './ThemeButton'
 import ThemeContext, { theme } from '@/app/store/ThemeContext'
 import Link from 'next/link'
 import './Menu.css'
 import '@/app/ui/style.css'
 
-const setBodyClass = (className) =>
-  (document.documentElement.className = className)
 const imageStyle = {
   width: '100%',
   height: '100%',
 }
 export default function Menu() {
+  const { themeState, setThemeState } = useContext(ThemeContext)
   useEffect(() => {
     const html = document.documentElement
-    if (!html.classList.contains('light') && !html.classList.contains('dark')) {
+    const savedTheme = localStorage.getItem('theme')
+
+    if (savedTheme === 'dark') {
+      html.classList.add('dark')
+      setThemeState(theme.dark)
+    } else if (savedTheme === 'light') {
       html.classList.add('light')
+      setThemeState(theme.light)
+    } else {
+      // 根據系統偏好設定
+      const prefersDark = window.matchMedia(
+        '(prefers-color-scheme: dark)'
+      ).matches
+      html.classList.add(prefersDark ? 'dark' : 'light')
     }
   }, [])
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const { themeState, setThemeState } = useContext(ThemeContext)
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen((prev) => !prev)
@@ -81,20 +92,9 @@ export default function Menu() {
             onItemClick={() => {}}
           />
         </div>
-        <div id="tools">
-          <SearchBar />
-          <button
-            id="themeBtn"
-            onClick={() => {
-              setThemeState((pre) =>
-                pre === theme.light ? theme.dark : theme.light
-              )
-              setBodyClass(themeState.color === '#f8f8f8' ? 'dark' : 'light')
-              console.log(themeState.color)
-            }}
-          ></button>
-        </div>
+        <SearchBar />
       </div>
+      <ThemeButton />
     </menu>
   )
 }

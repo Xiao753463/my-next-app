@@ -8,7 +8,10 @@ html.light {
     --color-searchbar-bg: #e4e4e4;
     --color-searchsuggests-bg: rgb(255, 255, 255);
     --menu-bg: 255, 255, 255;
-    --themebtn-bg: #554d56;
+    --dropdown-shadow: 0 0 0;
+    --theme-toggle-bg: rgb(225, 225, 255);
+    --theme-toggle-shadow: rgb(185, 185, 215);
+    --themebtn-bg: #fdbd39;
   }
   
   html.dark {
@@ -17,10 +20,13 @@ html.light {
     --color-hover: #333333;
     --color-selected-bg: #eae0d0;
     --color-selected-text: #000000;
-    --color-searchbar-bg: rgb(30, 30, 30);
-    --color-searchsuggests-bg: rgb(30, 30, 30);
-    --menu-bg: 15, 15, 15;
-    --themebtn-bg: #fdbd39;
+    --color-searchbar-bg: rgb(20, 20, 20);
+    --color-searchsuggests-bg: #1e1e1e;
+    --menu-bg: 45, 45, 45;
+    --dropdown-shadow: 255 255 255;
+    --theme-toggle-bg: rgb(35, 35, 60);
+    --theme-toggle-shadow: rgb(0, 0, 5);
+    --themebtn-bg: #e4e4e4;
   }
 
 html, body {
