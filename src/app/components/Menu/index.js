@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import { portfolioItems } from '../../data'
 import SearchBar from '../SearchBar'
 import MenuItems from '../MenuItems'
@@ -15,6 +15,12 @@ const imageStyle = {
   height: '100%',
 }
 export default function Menu() {
+  useEffect(() => {
+    const html = document.documentElement
+    if (!html.classList.contains('light') && !html.classList.contains('dark')) {
+      html.classList.add('light')
+    }
+  }, [])
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const { themeState, setThemeState } = useContext(ThemeContext)
 
