@@ -53,7 +53,7 @@ menu {
   text-align: center;
   min-width: 60px;
 }
-.menu div{
+.menu > div{
   width: 100%;
   text-align: center;
   height: auto;

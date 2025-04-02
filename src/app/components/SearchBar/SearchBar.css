@@ -16,6 +16,7 @@
   border-radius: 5px;
   caret-color: var(--color-text);
   color: var(--color-text);
+  cursor:text;
 }
 .search-input:focus{
   outline: none;
