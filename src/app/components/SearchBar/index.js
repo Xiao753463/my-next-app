@@ -56,7 +56,12 @@ export default function SearchBar() {
 
   return (
     <div className="search-container" ref={searchRef}>
-      <input
+      <motion.input
+        initial={{ backgroundColor: 'var(--color-searchbar-bg)' }}
+        whileHover={{
+          backgroundColor: 'var(--color-searchbar-hover-bg)',
+          transition: { duration: 0.25 },
+        }}
         type="text"
         value={query}
         onChange={handleInputChange}

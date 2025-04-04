@@ -2,10 +2,11 @@
 html.light {
     --color-bg: rgb(248, 248, 248);
     --color-text: #323232;
-    --color-hover: #e9e9e9;
+    --color-hover: #fafafa;
     --color-selected-bg: #333333;
     --color-selected-text: #ffffff;
-    --color-searchbar-bg: #e4e4e4;
+    --color-searchbar-bg: #eaeaea;
+    --color-searchbar-hover-bg: #dfdfdf;
     --color-searchsuggests-bg: rgb(255, 255, 255);
     --menu-bg: 255, 255, 255;
     --dropdown-shadow: 0 0 0;
@@ -20,7 +21,8 @@ html.light {
     --color-hover: #333333;
     --color-selected-bg: #eae0d0;
     --color-selected-text: #000000;
-    --color-searchbar-bg: rgb(20, 20, 20);
+    --color-searchbar-bg: #141414;
+    --color-searchbar-hover-bg: #020202;
     --color-searchsuggests-bg: #1e1e1e;
     --menu-bg: 45, 45, 45;
     --dropdown-shadow: 255 255 255;
