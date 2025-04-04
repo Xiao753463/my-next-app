@@ -3,6 +3,8 @@
 }
 #work-title h2{
     font-size: 3rem;
+    text-align: center;
+    font-size: clamp(1.5rem, 2.5vw, 3.5rem);
 }
 #work-subtitle{
     width: 100%;
@@ -10,8 +12,8 @@
     justify-content: center;
 }
 #work-subtitle h3{
-    font-size: 14pt;
     font-weight: 400;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
 }
 #info{
     width: 100%;
@@ -67,15 +69,5 @@
     min-width: 320px;
     display: flex;
     justify-content: center;
-    font-size: clamp(0.7rem, 1.5vw, 1rem);
-}
-@media screen and (max-width:768px) {
-    #work-title h2{
-        font-size: 2rem;
-    }
-}
-@media screen and (max-width:480px) {
-    #work-title h2{
-        font-size: 1.5rem;
-    }
+    font-size: clamp(0.75rem, 1.5vw, 1rem);
 }
