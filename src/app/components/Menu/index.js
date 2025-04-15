@@ -58,7 +58,7 @@ export default function Menu() {
 
   const socialMediaLinks = [
     {
-      imgSrc: '/imgs/FB-Icon.png',
+      imgSrc: '/imgs/FB.png',
       url: 'https://www.facebook.com/hsiao.chunyun/',
     },
     {
