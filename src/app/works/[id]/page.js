@@ -1,11 +1,11 @@
 'use client'
-import React from 'react'
-import Link from 'next/link'
+import React, { useContext } from 'react'
 import { portfolioItems } from '../../data'
 import Image from 'next/image'
 import Blank from './Blank'
 import { useParams } from 'next/navigation'
 import './Work.css'
+import GitHubButton from '@/app/components/GitHubButton'
 const bigImgStyle = {
   width: '100%',
   height: 'auto',
@@ -29,6 +29,7 @@ const Work = ({ data }) => {
         <div id="work-title" className="title">
           <h2 className="subtitle">{item.title}</h2>
         </div>
+        <GitHubButton gitLink={item.git} />
         <Blank h={40} />
         <div id="work-subtitle" className="subtitle">
           <h3>{item.subtitle}</h3>

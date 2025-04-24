@@ -29,6 +29,7 @@ const PortfolioList = ({ tech }) => {
               <PortfolioItem
                 id={item.id}
                 title={item.title}
+                git={item.git}
                 subtitle={item.subtitle}
                 images={item.images}
                 path={`imgs/${item.id}/`}

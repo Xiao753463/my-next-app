@@ -2,6 +2,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import GitHubButton from '@/app/components/GitHubButton'
 const imageStyle = {
   height: 'auto',
   boxShadow: '0 0 30px rgba(0, 0, 0, 0.05)',
@@ -9,7 +10,7 @@ const imageStyle = {
   maxWidth: '100%',
   height: 'auto',
 }
-const PortfolioItem = ({ id, title, subtitle, images, path }) => {
+const PortfolioItem = ({ id, title, git, subtitle, images, path }) => {
   return (
     <div className="portfolio-item">
       <div className="w_item">
@@ -25,6 +26,7 @@ const PortfolioItem = ({ id, title, subtitle, images, path }) => {
           <h5>{title}</h5>
           <small>{subtitle}</small>
         </Link>
+        <GitHubButton gitLink={git} />
       </div>
     </div>
   )

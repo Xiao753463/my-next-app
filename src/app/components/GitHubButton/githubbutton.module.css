@@ -1,0 +1,7 @@
+#githubBtnComponent{
+  display: flex;
+  justify-content: center;
+}
+#githubBtnComponent a{
+  width: 24px;
+}

@@ -8,6 +8,7 @@ import ThemeContext, { theme } from '@/app/store/ThemeContext'
 import Link from 'next/link'
 import './Menu.css'
 import '@/app/ui/style.css'
+import GitHubButton from '@/app/components/GitHubButton'
 
 const imageStyle = {
   width: '100%',
@@ -84,6 +85,7 @@ export default function Menu() {
     <menu>
       <div>
         <div id="nav">
+          <GitHubButton gitLink={'https://github.com/Xiao753463/my-next-app'} />
           <Link href="/" className="link">
             Xiao&apos;s Resume
           </Link>
